@@ -7,13 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 // import { store, persistor } from './redux/store';
 import { GlobalStyle } from 'components/GlobalStyle';
+import { theme } from 'styles/theme';
 
-const theme = {
-  colors: {},
-  animation: {},
-  shadows: {},
 
-};
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

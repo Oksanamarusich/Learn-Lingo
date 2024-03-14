@@ -3,13 +3,13 @@ import { lazy } from 'react';
 
 import { Layout } from './Layout/Layout';
 
-const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const Home = lazy(() => import('../pages/Home/Home'));
 
 export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+        <Route index element={<Home />} />
       </Route>
     </Routes>
   );
