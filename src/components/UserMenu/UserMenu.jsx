@@ -1,14 +1,18 @@
+import { LogInIcon } from "components/icons/LogInIcon";
+import { ButtonLogIn, ButtonRegistration, ContainerButton, UserMenuContainer } from "./UserMenu.styled";
+
 export const UserMenu = () => {
   return (
     <>
-      <ul>
+      <UserMenuContainer>
+        <ContainerButton>
+          <LogInIcon/>
+          <ButtonLogIn>LogIn</ButtonLogIn>
+        </ContainerButton>
         <li>
-          <button>LogIn</button>
+          <ButtonRegistration>Registration</ButtonRegistration>
         </li>
-        <li>
-          <button>Registration</button>
-        </li>
-      </ul>
+      </UserMenuContainer>
     </>
   );
 };

@@ -9,7 +9,14 @@ export const GlobalStyle = createGlobalStyle`
 
 
 :root{
+  --family:"Roboto", sans-serif;
 
+/* --accent: ${({ theme }) => theme.accent};
+  --hover: ${({ theme }) => theme.hover};
+  --transition: ${({ theme }) => theme.transition};
+  
+  --primaryBgColor: ${({ theme }) => theme.primaryBgColor};
+  --secondaryBgColor: ${({ theme }) => theme.secondaryBgColor}; */
 }
 
 @font-face{
@@ -77,6 +84,10 @@ li{
   text-decoration: none;
   list-style: none;
   padding: 0;
+}
+button{
+  border:0;
+  cursor:pointer;
 }
 
 `;

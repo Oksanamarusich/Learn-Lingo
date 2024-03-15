@@ -1,14 +1,28 @@
-import { Link, NavLink } from "react-router-dom"
+import { UkraineIcon } from 'components/icons/UkraineIcon';
+import {
+  ContainerLogo,
+  ContainerNavigation,
+  NavigationList,
+  StyledLink,
+  StyledNavLink,
+} from './Navigation.styled';
 
 export const Navigation = () => {
-    return <>
-     <Link>LearnLingo</Link>
-      <ul>
+  return (
+    <ContainerNavigation>
+      <ContainerLogo>
+        <UkraineIcon/>
+        <StyledLink>LearnLingo</StyledLink>
+      </ContainerLogo>
+
+      <NavigationList>
         <li>
-          <NavLink>Home</NavLink>
+          <StyledNavLink>Home</StyledNavLink>
         </li>
         <li>
-          <NavLink>Teachers</NavLink>
+          <StyledNavLink>Teachers</StyledNavLink>
         </li>
-      </ul></>
-}
+      </NavigationList>
+    </ContainerNavigation>
+  );
+};
