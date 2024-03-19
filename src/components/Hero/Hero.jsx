@@ -17,7 +17,7 @@ export const Hero = ({theme, picture }) => {
         <TitleContainer>
           <Title >
             Unlock your potential with <br /> the best{' '}
-            <TitleSpan style = {theme}>language</TitleSpan> tutors
+            <TitleSpan>language</TitleSpan> tutors
           </Title>
         </TitleContainer>
         <ContainerDescription>
@@ -30,7 +30,7 @@ export const Hero = ({theme, picture }) => {
 
         <ButtonHero type="button">Get started</ButtonHero>
       </ContainerTitle>
-      <img src={picture || defaultPicture} alt="image" width="568px" />
+      <img src={picture||defaultPicture} alt="girl with laptop" width="568px" />
     </SectionHero>
   );
 };
