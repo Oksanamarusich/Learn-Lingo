@@ -7,22 +7,19 @@ import { BrowserRouter } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 // import { store, persistor } from './redux/store';
 import { GlobalStyle } from 'components/GlobalStyle';
-import { theme } from 'styles/theme';
-
-
-
+import { themePeach } from 'styles/themes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}> */}
-        <BrowserRouter basename="/Learn-Lingo">
-          <ThemeProvider theme={theme}>
-            <App />
-            <GlobalStyle />
-          </ThemeProvider>
-        </BrowserRouter>
-      {/* </PersistGate>
+    <BrowserRouter basename="/Learn-Lingo">
+      <ThemeProvider theme={themePeach}>
+        <App />
+        <GlobalStyle />
+      </ThemeProvider>
+    </BrowserRouter>
+    {/* </PersistGate>
     </Provider> */}
   </React.StrictMode>
 );

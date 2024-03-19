@@ -3,9 +3,10 @@ import { styled } from "styled-components";
 
 export const ContainerNavigation = styled.div`
 padding:10px 0;
-margin-right: auto;
+margin-right: 268px;;
 display:flex;
-justify-content: space-between;
+gap:390px;
+
 width:661px;
 `
 export const ContainerLogo = styled.div`
@@ -22,11 +23,13 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: -0.02em;
-color: ${({theme})=>theme.default.secondaryTxtColor};
+color: ${({theme})=>theme.secondaryTxtColor};
 `
 
 export const NavigationList = styled.ul`
+padding:4px 0;
 display:flex;
+justify-content:center;
 gap:28px;
 width: 138px;
 `
@@ -36,6 +39,6 @@ font-family: var(--family);
 font-weight: 400;
 font-size: 16px;
 line-height: 1.25;
-color:${({theme})=>theme.default.secondaryTxtColor};
+color:${({theme})=>theme.secondaryTxtColor};
 `
 

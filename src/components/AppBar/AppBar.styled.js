@@ -3,7 +3,8 @@ import { styled } from "styled-components";
 export const Header = styled.header`
 
 display:flex;
-width: 100%;
-padding:20px 128px;
+justify-content:space-between;
+width: 1184px;
+padding:10px 128px;
 
 `;

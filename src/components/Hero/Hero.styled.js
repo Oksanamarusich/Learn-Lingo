@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 
 export const SectionHero = styled.section`
 padding:0 64px;
+margin-bottom:24px;
 display:flex;
-justify-content:space-between;
 gap:24px;
 `
 
@@ -13,7 +13,7 @@ padding:98px 108px 64px;
 border-radius: 30px;
 width: 720px;
 height: 530px;
-background-color:${({theme})=>theme.default.containerTitleBg};
+background-color:${({theme})=>theme.containerTitleBg};
 `
 export const TitleContainer = styled.div`
 margin-bottom:32px;
@@ -27,12 +27,12 @@ font-weight: 500;
 font-size: 48px;
 line-height: 1.16667;
 letter-spacing: -0.02em;
-color:${({theme})=>theme.default.primaryTxtColor};
+color:${({theme})=>theme.primaryTxtColor};
 `
 export const TitleSpan = styled.span`
 font-style: italic;
 font-weight: 400;
-background-color:${({ theme }) => theme.default.accent};
+background-color:${({ theme }) => theme.accent};
 border-radius: 12px;
 `
 export const DescriptionHero = styled.p`
@@ -41,7 +41,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.375;
 letter-spacing: -0.02em;
-color:${({theme})=>theme.default.primaryTxtColor};
+color:${({theme})=>theme.primaryTxtColor};
 `
 export const ContainerDescription = styled.div`
 margin-bottom:64px;
@@ -54,11 +54,16 @@ border-radius: 12px;
 padding: 16px 88px;
 width: 267px;
 height: 60px;
-background-color:${({ theme }) => theme.default.buttonBgColor};
+background-color:${({ theme }) => theme.buttonBgColor};
 font-family: var(--family);
 font-weight: 700;
 font-size: 18px;
 line-height: 1.55556;
-color: ${({ theme }) => theme.default.primaryTxtColor};
+color: ${({ theme }) => theme.primaryTxtColor};
 white-space:nowrap;
+transition: background-color ${({ theme }) => theme.transition};
+
+&:hover {
+background-color: ${({ theme }) => theme.hover};
+}
 `

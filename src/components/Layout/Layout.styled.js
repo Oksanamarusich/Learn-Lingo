@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
- /* margin: 0 128px; */
+  max-width: 100%;
+  margin: 0 auto;
+  background-color:  ${({theme})=> theme.primaryBgColor};
 `;
