@@ -12,15 +12,15 @@ export const Navigation = () => {
     <ContainerNavigation>
       <ContainerLogo>
         <UkraineIcon/>
-        <StyledLink>LearnLingo</StyledLink>
+        <StyledLink to="/">LearnLingo</StyledLink>
       </ContainerLogo>
 
       <NavigationList>
         <li>
-          <StyledNavLink>Home</StyledNavLink>
+          <StyledNavLink to="/">Home</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink>Teachers</StyledNavLink>
+          <StyledNavLink to="/teachers">Teachers</StyledNavLink>
         </li>
       </NavigationList>
     </ContainerNavigation>

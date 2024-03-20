@@ -9,13 +9,14 @@ import {
   TitleSpan,
 } from './Hero.styled';
 import defaultPicture from '../../assets/img/image.jpg';
+import { Link } from 'react-router-dom';
 
-export const Hero = ({theme, picture }) => {
+export const Hero = ({ theme, picture }) => {
   return (
     <SectionHero style={theme}>
       <ContainerTitle>
         <TitleContainer>
-          <Title >
+          <Title>
             Unlock your potential with <br /> the best{' '}
             <TitleSpan>language</TitleSpan> tutors
           </Title>
@@ -27,10 +28,15 @@ export const Hero = ({theme, picture }) => {
             highly qualified and experienced tutors.
           </DescriptionHero>
         </ContainerDescription>
-
-        <ButtonHero type="button">Get started</ButtonHero>
+        <Link to={"/teachers"}>
+          <ButtonHero type="button">Get started</ButtonHero>
+        </Link>
       </ContainerTitle>
-      <img src={picture||defaultPicture} alt="girl with laptop" width="568px" />
+      <img
+        src={picture || defaultPicture}
+        alt="girl with laptop"
+        width="568px"
+      />
     </SectionHero>
   );
 };
