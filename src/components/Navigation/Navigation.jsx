@@ -11,7 +11,7 @@ export const Navigation = () => {
   return (
     <ContainerNavigation>
       <ContainerLogo>
-        <UkraineIcon/>
+        <UkraineIcon />
         <StyledLink to="/">LearnLingo</StyledLink>
       </ContainerLogo>
 

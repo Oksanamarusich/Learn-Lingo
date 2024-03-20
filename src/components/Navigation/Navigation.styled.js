@@ -23,7 +23,7 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: -0.02em;
-color: ${({theme})=>theme.secondaryTxtColor};
+color: ${({theme})=>theme.colors.secondaryTxtColor};
 `
 
 export const NavigationList = styled.ul`
@@ -39,6 +39,9 @@ font-family: var(--family);
 font-weight: 400;
 font-size: 16px;
 line-height: 1.25;
-color:${({theme})=>theme.secondaryTxtColor};
+color:${({ theme }) => theme.colors.secondaryTxtColor};
+ &.active {
+    color: ${({theme}) => theme.colors.buttonBgColor};
+    text-decoration: underline;
 `
 

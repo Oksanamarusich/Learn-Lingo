@@ -1,14 +1,25 @@
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { Field, Form, Formik } from 'formik';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 
-import { ErrMsg } from './RegisterForm.styled';
 import { EyeOff } from 'components/icons/EyeOff';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/auth/authSlice';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
-
+import {
+  ErrMsg,
+  IconStyledEye,
+  StyledButtonForm,
+  StyledField,
+  StyledFieldIcon,
+  StyledLabel,
+  Text,
+  TitleForm,
+} from 'components/StyledForm.styled';
+import { ContainerRegister, StyledForm } from './RegisterForm.styled';
+import { IconClose } from 'components/icons/IconClose';
+import { ButtonForm } from 'components/StyledForm.styled';
 
 const FormSchema = yup.object().shape({
   name: yup
@@ -20,35 +31,39 @@ const FormSchema = yup.object().shape({
   password: yup
     .string()
     .min(8, 'Password is too short - should be 8 chars minimum.')
-    //  .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.')
     .required('This field is required'),
 });
 
-export const RegisterForm = () => {
-  const [passwordShown, setPasswordShown] = useState(false);
+export const RegisterForm = ({ onClose }) => {
+  const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
-  
 
   const initialValues = {
     name: '',
     email: '',
     password: '',
   };
-  
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = ({ name, email, password }, actions) => {
     const auth = getAuth();
-   
+
     createUserWithEmailAndPassword(auth, email, password)
-      .then(({ user }) =>{
-        console.log(user)
-        dispatch(setUser({
-          email: user.email,
-          id: user.uid,
-          token: user.accessToken,
-        }));
-       })
-      
+      .then(({ user }) => {
+        dispatch(
+          setUser({
+            email: user.email,
+            id: user.uid,
+            token: user.accessToken,
+          })
+        );
+        toast.success('Registration is successful');
+        onClose();
+      })
+
       .catch(error => {
         toast.error('User is already exist');
       });
@@ -57,41 +72,46 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div>
-      <h1>Registration</h1>
-      <p>
+    <ContainerRegister>
+      <TitleForm>Registration</TitleForm>
+      <Text>
         Thank you for your interest in our platform! In order to register, we
         need some information. Please provide us with the following information
-      </p>
+      </Text>
+      <ButtonForm type="button" onClick={onClose}>
+        <IconClose />
+      </ButtonForm>
       <Formik
         initialValues={initialValues}
         validationSchema={FormSchema}
         onSubmit={handleSubmit}
       >
-        <Form>
-          <label htmlFor="name">
-            Name
-            <Field id="name" name="name" />
+        <StyledForm>
+          <StyledLabel>
+            <StyledField name="name" placeholder="Name" />
             <ErrMsg name="name" component="p" />
-          </label>
+          </StyledLabel>
 
-          <label htmlFor="email">
-            Email
-            <Field id="email" name="email" type="email" />
+          <StyledLabel>
+            <StyledField name="email" type="email" placeholder="Email" />
             <ErrMsg name="email" component="p" />
-          </label>
+          </StyledLabel>
 
-          <label htmlFor="password">
-            Password
-            <Field id="password" name="password" />
-            <EyeOff onClick={() => {
-              setPasswordShown(!passwordShown);
-            }}/>
+          <StyledLabel>
+            <StyledFieldIcon
+              name="password"
+              placeholder="Password"
+              type={showPassword ? 'text' : 'password'}
+            />
+            <IconStyledEye onClick={togglePasswordVisibility}>
+              <EyeOff />
+            </IconStyledEye>
+
             <ErrMsg name="password" component="p" />
-          </label>
-          <button type="submit">Sign Up</button>
-        </Form>
+          </StyledLabel>
+          <StyledButtonForm type="submit">Sign Up</StyledButtonForm>
+        </StyledForm>
       </Formik>
-    </div>
+    </ContainerRegister>
   );
 };

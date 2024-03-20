@@ -11,11 +11,12 @@ const Teachers = lazy(() => import('../pages/Teachers/Teachers'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const auth = getAuth();
+   
+
     onAuthStateChanged(auth, user => {
-      console.log(user);
       if (user) {
         dispatch(
           refreshUser({

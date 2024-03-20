@@ -89,5 +89,26 @@ button{
   border:0;
   cursor:pointer;
 }
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: var(--borderModal);
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.modal-overlay {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+}
 
 `;

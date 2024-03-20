@@ -10,6 +10,9 @@ import { GlobalStyle } from 'components/GlobalStyle';
 import { themePeach } from 'styles/themes';
 import './firebase';
 import { Toaster } from 'react-hot-toast';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,6 +26,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
     </PersistGate>
     </Provider>
-    <Toaster position="top-right" reverseOrder={false} />
+    <Toaster position="top-center" reverseOrder={false} />
   </React.StrictMode>
 );
