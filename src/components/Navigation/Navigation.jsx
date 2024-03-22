@@ -22,6 +22,9 @@ export const Navigation = () => {
         <li>
           <StyledNavLink to="/teachers">Teachers</StyledNavLink>
         </li>
+        <li>
+          <StyledNavLink to="/favorites">Favorites</StyledNavLink>
+        </li>
       </NavigationList>
     </ContainerNavigation>
   );

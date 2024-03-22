@@ -10,9 +10,10 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
   --family:"Roboto", sans-serif;
-
-/* --accent: ${({ theme }) => theme.accent};
-  --hover: ${({ theme }) => theme.hover};
+--primaryTxtColor:${({theme})=> theme.colors.primaryTxtColor};
+ --accent: ${({ theme }) => theme.colors.accent};
+ --buttonBgColor:${({theme})=> theme.colors.buttonBgColor};
+  /*--hover: ${({ theme }) => theme.hover};
   --transition: ${({ theme }) => theme.transition};
   
   --primaryBgColor: ${({ theme }) => theme.primaryBgColor};
@@ -86,7 +87,7 @@ li{
   padding: 0;
 }
 button{
-  border:0;
+  border:transparent;
   cursor:pointer;
 }
 .modal-content {

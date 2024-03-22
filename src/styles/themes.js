@@ -7,9 +7,10 @@ export const theme = {
     primaryTxtColor: '#121417',
     secondaryTxtColor: 'rgba(18, 20, 23, 0.7)',
     primaryBgColor: ' #fff',
-    containerTitleBg: ' #f8f8f8',
+    secondaryBgColor: ' #f8f8f8',
     hover: '#fff',
     borderInput: 'rgba(18, 20, 23, 0.1)',
+    subtitle:'#8a8a89',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -25,8 +26,10 @@ export const themePeach = {
     primaryTxtColor: '#121417',
     secondaryTxtColor: 'rgba(18, 20, 23, 0.7)',
     primaryBgColor: ' #fff',
-    containerTitleBg: ' #f8f8f8',
+    secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
+    subtitle: '#8a8a89',
+    
   },
 
   animation: {
@@ -43,8 +46,9 @@ export const themeGray = {
     primaryTxtColor: '#121417',
     secondaryTxtColor: 'rgba(18, 20, 23, 0.7)',
     primaryBgColor: ' #fff',
-    containerTitleBg: ' #f8f8f8',
+    secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1',
+    subtitle:'#8a8a89',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -60,8 +64,9 @@ export const themeBlue = {
     primaryTxtColor: '#121417',
     secondaryTxtColor: 'rgba(18, 20, 23, 0.7)',
     primaryBgColor: ' #fff',
-    containerTitleBg: ' #f8f8f8',
+    secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
+    subtitle:'#8a8a89',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -77,8 +82,9 @@ export const themeCrimson = {
     primaryTxtColor: '#121417',
     secondaryTxtColor: 'rgba(18, 20, 23, 0.7)',
     primaryBgColor: ' #fff',
-    containerTitleBg: ' #f8f8f8',
+    secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
+    subtitle:'#8a8a89',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -94,8 +100,9 @@ export const themePink = {
     primaryTxtColor: '#121417',
     secondaryTxtColor: 'rgba(18, 20, 23, 0.7)',
     primaryBgColor: ' #fff',
-    containerTitleBg: ' #f8f8f8',
+    secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
+    subtitle:'#8a8a89',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',

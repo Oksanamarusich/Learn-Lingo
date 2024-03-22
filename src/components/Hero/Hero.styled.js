@@ -13,7 +13,7 @@ padding:98px 108px 64px;
 border-radius: 30px;
 width: 720px;
 height: 530px;
-background-color:${({theme})=>theme.colors.containerTitleBg};
+background-color:${({theme})=>theme.colors.secondaryBgColor};
 `
 export const TitleContainer = styled.div`
 margin-bottom:32px;

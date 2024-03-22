@@ -8,7 +8,7 @@ export const Loader = () => {
         visible={true}
         height="80"
         width="80"
-        color="#f4c550"
+        color="var(--buttonBgColor)"
         radius="9"
         ariaLabel="three-dots-loading"
         wrapperStyle={{}}
