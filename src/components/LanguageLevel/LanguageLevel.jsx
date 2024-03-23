@@ -5,20 +5,22 @@ import {
   TextLevel,
 } from './LanguageLevel.styled';
 
-export const LanguageLevel = () => {
+export const LanguageLevel = ({level}) => {
   return (
     <BlockLanguage>
       <BlockLevelActive>
-        <TextLevel>#A1 Beginner</TextLevel>
+        <TextLevel>#{level.levels[0]
+        }</TextLevel>
       </BlockLevelActive>
       <BlockLevel>
-        <TextLevel></TextLevel>
+        <TextLevel>#{level.levels
+[1] }</TextLevel>
       </BlockLevel>
       <BlockLevel>
-        <TextLevel></TextLevel>
+        <TextLevel>#{level.levels[2]}</TextLevel>
       </BlockLevel>
       <BlockLevel>
-        <TextLevel></TextLevel>
+        <TextLevel>#{level.levels[3] }</TextLevel>
       </BlockLevel>
     </BlockLanguage>
   );

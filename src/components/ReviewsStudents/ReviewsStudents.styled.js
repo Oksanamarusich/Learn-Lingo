@@ -15,7 +15,7 @@ export const BoxUser = styled.div`
 `;
 
 export const AvatarUser = styled.img`
-  border: 1px solid black;
+  
   border-radius: 100px;
   width: 44px;
   height: 44px;

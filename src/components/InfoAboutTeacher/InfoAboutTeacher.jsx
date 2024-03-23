@@ -2,11 +2,11 @@ import { TiStarFullOutline } from 'react-icons/ti';
 
 import { BookOpen } from 'components/icons/BookOpen';
 import {
+  Avatar,
   BlockRating,
   BlokIcon,
   BlokNameRating,
   BoxPhoto,
-  ContainerHeart,
   Info,
   StyledStatus,
   Subtitle,
@@ -18,7 +18,18 @@ import {
 import { IconHeart } from 'components/icons/IconHeart';
 import { StatusIcon } from 'components/icons/StatusIcon';
 
-export const InfoAboutTeacher = () => {
+export const InfoAboutTeacher = ({ teacher }) => {
+  console.log(teacher);
+  const {
+    avatar_url,
+    languages,
+    name,
+    lessons_done,
+    rating,
+    price_per_hour,
+    lesson_info,
+    conditions,
+  } = teacher;
   return (
     <WrapperInfoAboutTeacher>
       <BoxPhoto>
@@ -27,44 +38,42 @@ export const InfoAboutTeacher = () => {
           <StatusIcon />
         </StyledStatus>
 
-        <img alt="" />
+        <Avatar src={avatar_url} alt="photo teacher" width="96" height="96"/>
       </BoxPhoto>
       <div>
         <BlokNameRating>
           <div>
             <Subtitle>Languages</Subtitle>
-            <TitleName>Name</TitleName>
+            <TitleName>{name}</TitleName>
           </div>
-                  <BlockRating>
-                      
+          <BlockRating>
             <BlokIcon>
               <BookOpen />
               <Text>Lessons online</Text>
             </BlokIcon>
 
-            <Text>Lessons done: </Text>
+            <Text>Lessons done:{lessons_done} </Text>
             <BlokIcon>
               <TiStarFullOutline fill=" #ffc531" />
-              <Text>Rating: </Text>
+              <Text>Rating:{rating} </Text>
             </BlokIcon>
-            <Text>Price/1hour: </Text>
-            <ContainerHeart>
-              <IconHeart />
-            </ContainerHeart>
+            <Text>Price/1hour:{price_per_hour} </Text>
           </BlockRating>
+
+          <IconHeart />
         </BlokNameRating>
 
         <Info>
           <Subtitle>Speaks: </Subtitle>
-          <TextUnderline>German,French</TextUnderline>
+          <TextUnderline>{languages}</TextUnderline>
         </Info>
         <Info>
           <Subtitle>lesson info:</Subtitle>
-          <Text>Lessons are structured</Text>
+          <Text>{lesson_info}</Text>
         </Info>
         <Info>
           <Subtitle>Conditions:</Subtitle>
-          <Text>Welcome</Text>
+          <Text>{conditions}</Text>
         </Info>
       </div>
     </WrapperInfoAboutTeacher>

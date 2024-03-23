@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { lazy, useEffect} from 'react';
+import { lazy, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 import { Layout } from './Layout/Layout';
@@ -12,7 +12,7 @@ const Favorites = lazy(() => import('../pages/Favorites/Favorites'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const auth = getAuth();
 
@@ -34,7 +34,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/teachers" element={<Teachers />} />
+        <Route path="/teachers" element={<Teachers />}/>
         <Route path="favorites" element={<Favorites />} />
       </Route>
 

@@ -6,22 +6,25 @@ export const WrapperInfoAboutTeacher = styled.div`
 `;
 
 export const BoxPhoto = styled.div`
-position:relative;
-
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 3px solid ${({ theme }) => theme.colors.accent};
   border-radius: 100px;
   width: 120px;
   height: 120px;
-  background: ${({ theme }) => theme.colors.primaryBgColor};
 `;
+
+export const Avatar = styled.img`
+  border-radius: 50%;
+`;
+
 export const StyledStatus = styled.i`
-position:absolute;
-top:19px;
-right:23px;;
-
+  position: absolute;
+  top: 18%;
+  right: 11%;
 `;
-
-
 
 export const BlokNameRating = styled.div`
   display: flex;
@@ -36,6 +39,7 @@ export const Subtitle = styled.h4`
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.subtitle};
 `;
+
 export const TitleName = styled.h2`
   margin-bottom: 32px;
   font-family: var(--family);
@@ -44,8 +48,9 @@ export const TitleName = styled.h2`
   line-height: 1;
   color: ${({ theme }) => theme.colors.primaryTxtColor};
 `;
+
 export const BlockRating = styled.div`
-position:relative;
+  position: relative;
   display: flex;
   gap: 32px;
   width: 607px;
@@ -63,8 +68,6 @@ position:relative;
   } */
 `;
 
-
-
 export const BlokIcon = styled.div`
   display: flex;
   gap: 8px;
@@ -78,7 +81,9 @@ export const Text = styled.p`
   font-size: 16px;
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.primaryTxtColor};
+  white-space: nowrap;
 `;
+
 export const Info = styled.div`
   display: flex;
   margin-bottom: 8px;
@@ -91,7 +96,3 @@ export const TextUnderline = styled.p`
   color: ${({ theme }) => theme.colors.primaryTxtColor};
   text-decoration: underline;
 `;
-
-export const ContainerHeart = styled.div`
-margin-left:auto;
-`
