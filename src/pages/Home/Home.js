@@ -7,21 +7,54 @@ import pink from '../../assets/img/pink.png';
 import blue from '../../assets/img/blue.png';
 import gray from '../../assets/img/gray.png';
 import crimson from '../../assets/img/crimson.png';
+import { ThemeProvider } from 'styled-components';
+import {
+  themeBlue,
+  themeCrimson,
+  themeGray,
+  themePeach,
+  themePink,
+} from 'styles/themes';
 
 const pictures = [peach, pink, blue, gray, crimson];
 
 export default function Home() {
-  const [picture, setPicture] = useState(gray);
+  const [picture, setPicture] = useState(peach);
+  const [selectedTheme, setSelectedTheme] = useState(themePeach);
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * pictures.length);
 
     setPicture(pictures[randomIndex]);
+
+    switch (randomIndex) {
+      case 0:
+        setSelectedTheme(themePeach);
+        break;
+      case 1:
+        setSelectedTheme(themePink);
+        break;
+      case 2:
+        setSelectedTheme(themeBlue);
+        break;
+      case 3:
+        setSelectedTheme(themeGray);
+        break;
+      case 4:
+        setSelectedTheme(themeCrimson);
+        break;
+
+      default:
+        break;
+    }
   }, []);
+
   return (
-    <main>
-      <Hero picture={picture} />
-      <Advantages />
-    </main>
+    <ThemeProvider theme={selectedTheme}>
+      <main>
+        <Hero picture={picture} />
+        <Advantages />
+      </main>
+    </ThemeProvider>
   );
 }
