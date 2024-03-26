@@ -1,3 +1,4 @@
+import Modal from 'react-modal';
 import { InfoAboutTeacher } from 'components/InfoAboutTeacher/InfoAboutTeacher';
 import { InfoReadMore } from 'components/InfoReadMore/InfoReadMore';
 
@@ -10,9 +11,22 @@ import {
   CardWrapper,
   WrapperLanguageLevel,
 } from './TeacherCard.styled';
+import { ModalBookTrial } from 'components/ModalBookTrial/ModalBookTrial';
 
 export const TeacherCard = ({ index, teacher }) => {
   const [isReadMore, setIsReadMore] = useState(false);
+  const [isModal, setIsModal] = useState(false);
+  
+  const openModal = () => {
+    setIsModal(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setIsModal(false);
+    document.body.style.overflow = '';
+  }
+
 
   return (
     <CardWrapper key={index}>
@@ -26,11 +40,20 @@ export const TeacherCard = ({ index, teacher }) => {
           </ButtonMoreInfo>
         )}
 
-        <LanguageLevel level={teacher} />
+        <LanguageLevel teacher={teacher} />
         {isReadMore && (
-          <ButtonBookTrial type="button">Book trial lesson</ButtonBookTrial>
+          <ButtonBookTrial type="button" onClick ={openModal}>Book trial lesson</ButtonBookTrial>
         )}
       </WrapperLanguageLevel>
+      <Modal
+        isOpen={isModal}
+          className="modal-content"
+          overlayClassName="modal-overlay"
+          contentLabel="Modal"
+          onRequestClose={closeModal}>
+        <ModalBookTrial onClose={closeModal} teacher={teacher} />
+    </Modal>
     </CardWrapper>
+    
   );
 };

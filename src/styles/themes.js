@@ -10,7 +10,10 @@ export const theme = {
     secondaryBgColor: ' #f8f8f8',
     hover: '#fff',
     borderInput: 'rgba(18, 20, 23, 0.1)',
-    subtitle:'#8a8a89',
+    subtitle: '#8a8a89',
+    numeric: '#38cd3e',
+    before:'rgba(18, 20, 23, 0.2)',
+    
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -29,6 +32,8 @@ export const themePeach = {
     secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
     subtitle: '#8a8a89',
+    numeric: '#38cd3e',
+    before:'rgba(18, 20, 23, 0.2)',
     
   },
 
@@ -48,7 +53,10 @@ export const themeGray = {
     primaryBgColor: ' #fff',
     secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1',
-    subtitle:'#8a8a89',
+    subtitle: '#8a8a89',
+    numeric: '#38cd3e',
+    before:'rgba(18, 20, 23, 0.2)',
+    
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -66,7 +74,10 @@ export const themeBlue = {
     primaryBgColor: ' #fff',
     secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
-    subtitle:'#8a8a89',
+    subtitle: '#8a8a89',
+    numeric: '#38cd3e',
+    before:'rgba(18, 20, 23, 0.2)',
+    
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -84,7 +95,10 @@ export const themeCrimson = {
     primaryBgColor: ' #fff',
     secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
-    subtitle:'#8a8a89',
+    subtitle: '#8a8a89',
+    numeric: '#38cd3e',
+    before:'rgba(18, 20, 23, 0.2)',
+    
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -102,7 +116,10 @@ export const themePink = {
     primaryBgColor: ' #fff',
     secondaryBgColor: ' #f8f8f8',
     borderInput: 'rgba(18, 20, 23, 0.1)',
-    subtitle:'#8a8a89',
+    subtitle: '#8a8a89',
+    numeric: '#38cd3e',
+    before:'rgba(18, 20, 23, 0.2)',
+    
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',

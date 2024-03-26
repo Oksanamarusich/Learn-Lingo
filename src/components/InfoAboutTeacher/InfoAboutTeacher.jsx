@@ -8,9 +8,11 @@ import {
   BlokNameRating,
   BoxPhoto,
   Info,
+  StyledSpan,
   StyledStatus,
   Subtitle,
   Text,
+  TextBefore,
   TextUnderline,
   TitleName,
   WrapperInfoAboutTeacher,
@@ -19,7 +21,6 @@ import { IconHeart } from 'components/icons/IconHeart';
 import { StatusIcon } from 'components/icons/StatusIcon';
 
 export const InfoAboutTeacher = ({ teacher }) => {
-  console.log(teacher);
   const {
     avatar_url,
     languages,
@@ -38,7 +39,7 @@ export const InfoAboutTeacher = ({ teacher }) => {
           <StatusIcon />
         </StyledStatus>
 
-        <Avatar src={avatar_url} alt="photo teacher" width="96" height="96"/>
+        <Avatar src={avatar_url} alt="photo teacher" width="96" height="96" />
       </BoxPhoto>
       <div>
         <BlokNameRating>
@@ -49,15 +50,17 @@ export const InfoAboutTeacher = ({ teacher }) => {
           <BlockRating>
             <BlokIcon>
               <BookOpen />
-              <Text>Lessons online</Text>
+              <TextBefore>Lessons online</TextBefore>
             </BlokIcon>
 
-            <Text>Lessons done:{lessons_done} </Text>
+            <TextBefore>Lessons done: {lessons_done} </TextBefore>
             <BlokIcon>
               <TiStarFullOutline fill=" #ffc531" />
-              <Text>Rating:{rating} </Text>
+              <TextBefore>Rating: {rating} </TextBefore>
             </BlokIcon>
-            <Text>Price/1hour:{price_per_hour} </Text>
+            <Text>
+              Price/1hour: <StyledSpan>{price_per_hour}$</StyledSpan>{' '}
+            </Text>
           </BlockRating>
 
           <IconHeart />

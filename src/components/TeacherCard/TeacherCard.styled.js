@@ -33,4 +33,9 @@ font-size: 18px;
 line-height: 1.55556;
 color:${({ theme }) => theme.colors.primaryTxtColor};
 white-space:nowrap;
+transition:background-color {({theme})=>theme.animation.transition};
+
+&:hover{
+  background-color:${({ theme }) => theme.colors.hover};
+};
 `

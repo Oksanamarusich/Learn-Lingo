@@ -1,27 +1,30 @@
+import { useState } from 'react';
 import {
   BlockLanguage,
-  BlockLevel,
-  BlockLevelActive,
-  TextLevel,
+  ButtonLevel,
+  ButtonLevelActive,
 } from './LanguageLevel.styled';
 
-export const LanguageLevel = ({level}) => {
+export const LanguageLevel = ({ teacher }) => {
+  const { levels } = teacher;
+  const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!active);
+  };
   return (
     <BlockLanguage>
-      <BlockLevelActive>
-        <TextLevel>#{level.levels[0]
-        }</TextLevel>
-      </BlockLevelActive>
-      <BlockLevel>
-        <TextLevel>#{level.levels
-[1] }</TextLevel>
-      </BlockLevel>
-      <BlockLevel>
-        <TextLevel>#{level.levels[2]}</TextLevel>
-      </BlockLevel>
-      <BlockLevel>
-        <TextLevel>#{level.levels[3] }</TextLevel>
-      </BlockLevel>
+      {levels.map((level, index) => (
+        <li key={index}>
+          {active ? (
+            <ButtonLevelActive  onClick={handleClick}>
+              #{level}
+            </ButtonLevelActive>
+          ) : (
+              <ButtonLevel  onClick={handleClick}>#{level}</ButtonLevel>
+          )}
+        </li>
+      ))}
     </BlockLanguage>
   );
 };

@@ -5,11 +5,13 @@ const teachersSlice = createSlice({
     name: 'teachers',
     initialState: {
         teachers: [],
+       
         
     },
     reducers: {
         getTeachers(state, action) {
             state.teachers = action.payload.teachers;
+
         },
     }
 })

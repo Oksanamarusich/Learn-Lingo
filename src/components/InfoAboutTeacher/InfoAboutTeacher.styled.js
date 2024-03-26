@@ -55,17 +55,6 @@ export const BlockRating = styled.div`
   gap: 32px;
   width: 607px;
   height: 24px;
-
-  /* &::before{
-    content:'';
-    position: absolute;
-    top:50px;
-    left:0;
-    
-     width: 252px;
-    height: 1px;
-    color:red;
-  } */
 `;
 
 export const BlokIcon = styled.div`
@@ -84,6 +73,27 @@ export const Text = styled.p`
   white-space: nowrap;
 `;
 
+export const TextBefore = styled.p`
+  position: relative;
+  font-family: var(--family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${({ theme }) => theme.colors.primaryTxtColor};
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 113%;
+
+    width: 1px;
+    height: 16px;
+    background-color: ${({ theme }) => theme.colors.before};
+  }
+`;
+
 export const Info = styled.div`
   display: flex;
   margin-bottom: 8px;
@@ -95,4 +105,8 @@ export const TextUnderline = styled.p`
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.primaryTxtColor};
   text-decoration: underline;
+`;
+
+export const StyledSpan = styled.span`
+  color: ${({ theme }) => theme.colors.numeric};
 `;
