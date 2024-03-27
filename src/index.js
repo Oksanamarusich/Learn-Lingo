@@ -15,7 +15,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter basename="/Learn-Lingo">
@@ -28,5 +28,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </PersistGate>
     </Provider>
     
-   </React.StrictMode>
+  //  </React.StrictMode>
 );

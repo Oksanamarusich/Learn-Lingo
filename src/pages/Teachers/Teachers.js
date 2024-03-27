@@ -1,11 +1,4 @@
-import {
-  getDatabase,
-  ref,
-  child,
-  get,
-  limitToFirst,
-  orderByKey,
-} from 'firebase/database';
+import { getDatabase, ref, child, get, limitToFirst } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import { ButtonLoadMore } from 'components/ButtonLoadMore/ButtonLoadMore';
 // import { Filters } from 'components/Filters/Filters';
@@ -24,15 +17,20 @@ export default function Teachers() {
   const itemsPerPage = 4;
   const dispatch = useDispatch();
 
-  const getDatabaseTeachers = () => {
-    setIsLoading(true);
+  const handleLoadMore = () => {
+    setCurrentPage(prevState => prevState + 1);
+  };
 
-    const dbRef = ref(getDatabase());
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+  useEffect(() => {
+    const getDatabaseTeachers = async () => {
+      setIsLoading(true);
 
-    get(child(dbRef, '/'), limitToFirst(endIndex))
-      .then(snapshot => {
+      const dbRef = ref(getDatabase());
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      try {
+        const snapshot = await get(child(dbRef, '/'), limitToFirst(endIndex));
+
         setIsLoading(false);
         if (snapshot.exists()) {
           const data = snapshot.val();
@@ -40,31 +38,26 @@ export default function Teachers() {
             startIndex,
             endIndex
           );
-          console.log(teachers)
+          console.log(teachers.length);
 
           dispatch(getTeachers(teachers));
         } else {
           toast.error('No data available');
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error(error);
-      });
-  };
+        toast.error('Error loading data');
+      }
+    };
 
-  const handleLoadMore = () => {
-    setCurrentPage((prevState) => prevState + 1);
-  };
-
-  useEffect(() => {
     getDatabaseTeachers();
-  }, [currentPage]);
+  }, [currentPage, dispatch]);
 
   return (
     <StyledMain>
       {/* <Filters /> */}
       {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
-      { !isLoading && <ButtonLoadMore handleLoadMore={handleLoadMore} />}
+      {!isLoading && dataTeachers.length>=4 && <ButtonLoadMore handleLoadMore={handleLoadMore} />}
     </StyledMain>
   );
 }
