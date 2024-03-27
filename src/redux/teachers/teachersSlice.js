@@ -10,7 +10,7 @@ const teachersSlice = createSlice({
     },
     reducers: {
         getTeachers(state, action) {
-            state.teachers = action.payload.teachers;
+            state.teachers = [...state.teachers, ...action.payload];
 
         },
     }

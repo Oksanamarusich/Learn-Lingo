@@ -1,5 +1,5 @@
 import { ReviewsStudents } from 'components/ReviewsStudents/ReviewsStudents';
-import { CardWrapper } from 'components/TeacherCard/TeacherCard.styled';
+
 
 import { Description } from './InfoReadMore.styled';
 

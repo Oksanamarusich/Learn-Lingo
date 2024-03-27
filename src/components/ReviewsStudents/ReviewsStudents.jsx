@@ -1,7 +1,6 @@
 import { TiStarFullOutline } from 'react-icons/ti';
 import { FaCircleUser } from "react-icons/fa6";
 import {
-  AvatarUser,
   BoxUser,
   DescriptionReviews,
   ListItem,
@@ -19,7 +18,6 @@ export const ReviewsStudents = ({ data }) => {
       <ListReview>
         <ListItem>
           <BoxUser>
-            {/* <AvatarUser alt="user photo" width="44px" /> */}
             <FaCircleUser size="44px"fill = "#8a8a89"/>
             <div>
               <Subtitle>{reviewer_name}</Subtitle>

@@ -21,11 +21,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <BrowserRouter basename="/Learn-Lingo">
           <ThemeProvider theme={themePeach}>
             <App />
-            <GlobalStyle />
+          <GlobalStyle />
+          <Toaster position="top-center" reverseOrder={false} />
           </ThemeProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>
-    <Toaster position="top-center" reverseOrder={false} />
-  </React.StrictMode>
+    
+   </React.StrictMode>
 );
