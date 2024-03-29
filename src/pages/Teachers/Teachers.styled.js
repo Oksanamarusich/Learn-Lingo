@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const StyledMain = styled.main`
+export const StyledSection = styled.section`
   padding: 96px 128px;
   display: flex;
   flex-direction: column;

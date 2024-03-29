@@ -1,4 +1,5 @@
 import { UkraineIcon } from 'components/icons/UkraineIcon';
+import { useAuth } from 'hooks/useAuth';
 import {
   ContainerLogo,
   ContainerNavigation,
@@ -8,6 +9,7 @@ import {
 } from './Navigation.styled';
 
 export const Navigation = () => {
+  const { token } = useAuth();
   return (
     <ContainerNavigation>
       <ContainerLogo>
@@ -19,12 +21,14 @@ export const Navigation = () => {
         <li>
           <StyledNavLink to="/">Home</StyledNavLink>
         </li>
+       
         <li>
           <StyledNavLink to="/teachers">Teachers</StyledNavLink>
         </li>
-        <li>
-          <StyledNavLink to="/favorites">Favorites</StyledNavLink>
-        </li>
+        {token &&
+          <li>
+            <StyledNavLink to="/favorites">Favorites</StyledNavLink>
+          </li>}
       </NavigationList>
     </ContainerNavigation>
   );

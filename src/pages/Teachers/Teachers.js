@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { ButtonLoadMore } from 'components/ButtonLoadMore/ButtonLoadMore';
 // import { Filters } from 'components/Filters/Filters';
 import { ListTeachers } from 'components/ListTeachers/ListTeachers';
-import { StyledMain } from './Teachers.styled';
+import { StyledSection } from './Teachers.styled';
 import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTeachers } from '../../redux/teachers/teachersSlice';
@@ -38,7 +38,6 @@ export default function Teachers() {
             startIndex,
             endIndex
           );
-          console.log(teachers.length);
 
           dispatch(getTeachers(teachers));
         } else {
@@ -54,10 +53,13 @@ export default function Teachers() {
   }, [currentPage, dispatch]);
 
   return (
-    <StyledMain>
+    <main>
+    <StyledSection>
       {/* <Filters /> */}
       {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
-      {!isLoading && dataTeachers.length>=4 && <ButtonLoadMore handleLoadMore={handleLoadMore} />}
-    </StyledMain>
+      {!isLoading && dataTeachers.length >= 4 && (
+        <ButtonLoadMore handleLoadMore={handleLoadMore} />
+      )}
+    </StyledSection></main>
   );
 }

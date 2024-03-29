@@ -1,5 +1,6 @@
 import { TiStarFullOutline } from 'react-icons/ti';
 
+
 import { BookOpen } from 'components/icons/BookOpen';
 import {
   Avatar,
@@ -17,10 +18,13 @@ import {
   TitleName,
   WrapperInfoAboutTeacher,
 } from './InfoAboutTeacher.styled';
-import { IconHeart } from 'components/icons/IconHeart';
-import { StatusIcon } from 'components/icons/StatusIcon';
 
-export const InfoAboutTeacher = ({ teacher }) => {
+import { StatusIcon } from 'components/icons/StatusIcon';
+import { ButtonHeart } from 'components/ButtonHeart/ButtonHeart';
+
+
+
+export const InfoAboutTeacher = ({ teacher, index }) => {
   const {
     avatar_url,
     languages,
@@ -31,6 +35,7 @@ export const InfoAboutTeacher = ({ teacher }) => {
     lesson_info,
     conditions,
   } = teacher;
+  
   return (
     <WrapperInfoAboutTeacher>
       <BoxPhoto>
@@ -62,8 +67,10 @@ export const InfoAboutTeacher = ({ teacher }) => {
               Price/1hour: <StyledSpan>{price_per_hour}$</StyledSpan>{' '}
             </Text>
           </BlockRating>
+          
+          <ButtonHeart index={index} teacher={teacher} />
+            
 
-          <IconHeart />
         </BlokNameRating>
 
         <Info>

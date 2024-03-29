@@ -30,7 +30,7 @@ export const TeacherCard = ({ index, teacher }) => {
 
   return (
     <CardWrapper key={index}>
-      <InfoAboutTeacher teacher={teacher} />
+      <InfoAboutTeacher teacher={teacher} index={index} />
       <WrapperLanguageLevel>
         {isReadMore ? (
           <InfoReadMore teacher={teacher} />
