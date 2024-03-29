@@ -6,7 +6,7 @@ import { Layout } from './Layout/Layout';
 import { useDispatch } from 'react-redux';
 import { refreshUser } from '../redux/auth/authSlice';
 import { PrivateRoute } from './PrivateRoute';
-import { useAuth } from 'hooks/useAuth';
+
 
 const Home = lazy(() => import('../pages/Home/Home'));
 const Teachers = lazy(() => import('../pages/Teachers/Teachers'));
@@ -14,7 +14,7 @@ const Favorites = lazy(() => import('../pages/Favorites/Favorites'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const { token } = useAuth();
+  
   
   useEffect(() => {
     const auth = getAuth();
