@@ -33,9 +33,7 @@ export const App = () => {
       }
     });
   }, [dispatch]);
-  return !token ?  (
-     <p>Refreshing user...</p>
-  ):(
+  return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
@@ -47,5 +45,5 @@ export const App = () => {
 
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
-  );
+  )
 };
