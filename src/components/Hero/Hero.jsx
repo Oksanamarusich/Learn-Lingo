@@ -28,7 +28,7 @@ export const Hero = ({ theme, picture }) => {
             highly qualified and experienced tutors.
           </DescriptionHero>
         </ContainerDescription>
-        <Link to={"/teachers"}>
+        <Link to={'/teachers'}>
           <ButtonHero type="button">Get started</ButtonHero>
         </Link>
       </ContainerTitle>

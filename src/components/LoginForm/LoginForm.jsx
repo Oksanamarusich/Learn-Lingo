@@ -50,7 +50,6 @@ export const LoginForm = ({ onClose }) => {
         dispatch(
           setUser({
             email: user.email,
-            id: user.uid,
             token: user.accessToken,
           })
           

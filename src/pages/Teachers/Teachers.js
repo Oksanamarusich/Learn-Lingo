@@ -54,12 +54,13 @@ export default function Teachers() {
 
   return (
     <main>
-    <StyledSection>
-      {/* <Filters /> */}
-      {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
-      {!isLoading && dataTeachers.length >= 4 && (
-        <ButtonLoadMore handleLoadMore={handleLoadMore} />
-      )}
-    </StyledSection></main>
+      <StyledSection>
+        {/* <Filters /> */}
+        {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
+        {!isLoading && dataTeachers.length <= 29 && (
+          <ButtonLoadMore handleLoadMore={handleLoadMore} />
+        )}
+      </StyledSection>
+    </main>
   );
 }

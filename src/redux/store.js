@@ -15,20 +15,20 @@ import { authReducer } from './auth/authSlice';
 import { favoritesReducer } from './favorites/favoritesSlice';
 import { teachersReducer } from './teachers/teachersSlice';
 
-const persistAuthConfig = {
-   key: 'auth', 
+ const persistAuthConfig = {
+  key: 'auth',
   storage,
-   whitelist: ['token'],
+  whitelist: ['token'],
 };
 
 const persistFavoritesConfig = {
-  key:'favorites',
+  key: 'favorites',
   storage,
-}
+};
 
 export const store = configureStore({
   reducer: {
-    auth:  persistReducer(persistAuthConfig,authReducer),
+    auth: persistReducer(persistAuthConfig, authReducer),
     teachers: teachersReducer,
     favorites: persistReducer(persistFavoritesConfig, favoritesReducer),
   },
