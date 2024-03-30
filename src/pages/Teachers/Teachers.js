@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react';
 import { ButtonLoadMore } from 'components/ButtonLoadMore/ButtonLoadMore';
 // import { Filters } from 'components/Filters/Filters';
 import { ListTeachers } from 'components/ListTeachers/ListTeachers';
-import { StyledSection } from './Teachers.styled';
+import { StyledMain, StyledSection } from './Teachers.styled';
 import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTeachers } from '../../redux/teachers/teachersSlice';
 import { selectTeachers } from '../../redux/teachers/selectors';
 import { Loader } from 'components/Loader/Loader';
+import { Filters } from 'components/Filters/Filters';
 
 export default function Teachers() {
   const dataTeachers = useSelector(selectTeachers);
@@ -53,14 +54,14 @@ export default function Teachers() {
   }, [currentPage, dispatch]);
 
   return (
-    <main>
+    <StyledMain>
+      <Filters />
       <StyledSection>
-        {/* <Filters /> */}
         {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
         {!isLoading && dataTeachers.length <= 29 && (
           <ButtonLoadMore handleLoadMore={handleLoadMore} />
         )}
       </StyledSection>
-    </main>
+    </StyledMain>
   );
 }
