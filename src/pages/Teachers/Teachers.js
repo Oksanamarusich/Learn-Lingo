@@ -63,27 +63,27 @@ export default function Teachers() {
   useEffect(() => {
     if (!filters) {
       return;
-    }else{
-    const getDatabaseTeachers = async () => {
-      const dbRef = ref(getDatabase());
+    } else {
+      const getDatabaseTeachers = async () => {
+        const dbRef = ref(getDatabase());
 
-      try {
-        const snapshot = await get(child(dbRef, '/'));
+        try {
+          const snapshot = await get(child(dbRef, '/'));
 
-        if (snapshot.exists()) {
-          const teachers = snapshot.val();
-          dispatch(getTeachers(teachers.teachers))
-        } else {
-          toast.error('No data available');
+          if (snapshot.exists()) {
+            const teachers = snapshot.val();
+            dispatch(getTeachers(teachers.teachers));
+          } else {
+            toast.error('No data available');
+          }
+        } catch (error) {
+          console.error(error);
+          toast.error('Error loading data');
         }
-      } catch (error) {
-        console.error(error);
-        toast.error('Error loading data');
-      }
-    };
+      };
 
-    getDatabaseTeachers();}
-    
+      getDatabaseTeachers();
+    }
   }, [filters]);
 
   return (
@@ -91,7 +91,7 @@ export default function Teachers() {
       {!isLoading && <Filters />}
       <StyledSection>
         {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
-        {!isLoading && dataTeachers.length <= 29 && (
+        {!isLoading && dataTeachers.length <= 29 && dataTeachers.length >= 4 && (
           <ButtonLoadMore handleLoadMore={handleLoadMore} />
         )}
       </StyledSection>
