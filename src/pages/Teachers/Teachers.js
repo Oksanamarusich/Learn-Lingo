@@ -84,7 +84,7 @@ export default function Teachers() {
 
       getDatabaseTeachers();
     }
-  }, [filters]);
+  }, [filters,dispatch]);
 
   return (
     <StyledMain>
