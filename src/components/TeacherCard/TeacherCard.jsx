@@ -13,7 +13,7 @@ import {
 } from './TeacherCard.styled';
 import { ModalBookTrial } from 'components/ModalBookTrial/ModalBookTrial';
 
-export const TeacherCard = ({ index, teacher }) => {
+export const TeacherCard = ({ index, teacher, filters }) => {
   const [isReadMore, setIsReadMore] = useState(false);
   const [isModal, setIsModal] = useState(false);
   
@@ -40,7 +40,7 @@ export const TeacherCard = ({ index, teacher }) => {
           </ButtonMoreInfo>
         )}
 
-        <LanguageLevel teacher={teacher} />
+        <LanguageLevel teacher={teacher} filters={filters} />
         {isReadMore && (
           <ButtonBookTrial type="button" onClick ={openModal}>Book trial lesson</ButtonBookTrial>
         )}

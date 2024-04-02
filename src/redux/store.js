@@ -13,6 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice';
 import { favoritesReducer } from './favorites/favoritesSlice';
+import { filtersReducer } from './filters/filtersSlice';
 import { teachersReducer } from './teachers/teachersSlice';
 
  const persistAuthConfig = {
@@ -31,6 +32,7 @@ export const store = configureStore({
     auth: persistReducer(persistAuthConfig, authReducer),
     teachers: teachersReducer,
     favorites: persistReducer(persistFavoritesConfig, favoritesReducer),
+    filters:  filtersReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
