@@ -4,8 +4,7 @@
 
   <p align="center">
     This project is an application  that will help users learn languages with their favorite speakers.</p>
-   
-![Image product](./src/assets/img/homePage.png)
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -32,11 +31,14 @@
   </li>
   <li>
   <p>A "Home" page with a list of company benefits and a link to get started with the application and redirect to the "Teachers" page. Stylization is implemented with different palette variations.</p>
+
+![Image product](./src/assets/img/homePage.png)
+
   </li>
   <li>
   <p>Rendering of the list of cards. Four cards are rendered on the  "Teachers" page, and the rest are loaded by clicking on the button "Load more".</p>
   
-  ![Image product](./src/assets/img/listCards.png)
+![Image product](./src/assets/img/listCards.png)
   </li>
   <li>
     <p>Mark cars as favorites. A private "Favorites" page is available for an authorized user, when going to which the user has the opportunity to view all teacher cards that he has added to "favorites".</p>
@@ -49,7 +51,7 @@
   </li>
   <li><p>Filtering by the language of instruction, by the level of students`knowledge and by the price per lesson hour.</p>
   
-  ![Image product](./src/assets/img/filtering.png)
+![Image product](./src/assets/img/filtering.png)
   </li>
 </ul>
 
