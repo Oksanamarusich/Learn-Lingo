@@ -46,13 +46,11 @@ export const LoginForm = ({ onClose }) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-      
         dispatch(
           setUser({
             email: user.email,
             token: user.accessToken,
           })
-          
         );
         onClose();
       })

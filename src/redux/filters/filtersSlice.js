@@ -11,7 +11,6 @@ const filtersSlice = createSlice({
     changeFilter(state, action) {
       state.filters = action.payload;
     },
-    
   },
 });
 

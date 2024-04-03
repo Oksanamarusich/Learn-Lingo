@@ -10,9 +10,9 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
   --family:"Roboto", sans-serif;
---primaryTxtColor:${({theme})=> theme.colors.primaryTxtColor};
+--primaryTxtColor:${({ theme }) => theme.colors.primaryTxtColor};
  --accent: ${({ theme }) => theme.colors.accent};
- --buttonBgColor:${({theme})=> theme.colors.buttonBgColor};
+ --buttonBgColor:${({ theme }) => theme.colors.buttonBgColor};
   /*--hover: ${({ theme }) => theme.hover};
   --transition: ${({ theme }) => theme.transition};
   

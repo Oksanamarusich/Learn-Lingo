@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const StyledMain = styled.main`
-background-color: ${({ theme }) => theme.colors.secondaryBgColor};
+  background-color: ${({ theme }) => theme.colors.secondaryBgColor};
 `;
 
 export const StyledSection = styled.section`
@@ -10,6 +10,5 @@ export const StyledSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:100%;
-  
+  height: 100%;
 `;

@@ -17,12 +17,12 @@ export const selectVisibleTeachers = createSelector(
         !languages || teacher.languages.includes(languages);
       const levelFilterResult = !levels || teacher.levels.includes(levels);
       const priceFilterResult =
-  !price_per_hour || parseInt(teacher.price_per_hour) <= parseInt(price_per_hour);
+        !price_per_hour ||
+        parseInt(teacher.price_per_hour) <= parseInt(price_per_hour);
       return languageFilterResult && levelFilterResult && priceFilterResult;
     });
   }
 );
-
 
 // const priceFilterResult =
 //         !price_per_hour || teacher.price_per_hour <= price_per_hour;

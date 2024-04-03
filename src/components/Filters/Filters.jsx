@@ -15,16 +15,16 @@ import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 
 export const Filters = () => {
-    const [data, setData] = useState([]);
-    const dispatch = useDispatch();
+  const [data, setData] = useState([]);
+  const dispatch = useDispatch();
   const languages = data.flatMap(({ languages }) => languages);
   const uniqueLanguages = [...new Set(languages)];
   const levels = data.flatMap(({ levels }) => levels);
   const uniqueLevels = [...new Set(levels)];
-    const price = data
-  .map(({ price_per_hour }) => price_per_hour)
-  .filter((value, index, self) => self.indexOf(value) === index) 
-  .sort((a, b) => a - b); 
+  const price = data
+    .map(({ price_per_hour }) => price_per_hour)
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .sort((a, b) => a - b);
 
   useEffect(() => {
     const getDatabaseTeachers = async () => {
@@ -57,9 +57,8 @@ export const Filters = () => {
           prise_per_hour: '',
         }}
         onSubmit={(values, actions) => {
-          console.log('Formik values', values);
-            dispatch(changeFilter(values));
-        
+          dispatch(changeFilter(values));
+
           actions.resetForm();
         }}
       >
@@ -67,7 +66,7 @@ export const Filters = () => {
           <StyledLabel>
             Languages
             <Field name="languages" as={StyledSelect}>
-              <option>All</option>
+              <StyledOption>All</StyledOption>
               {uniqueLanguages.map((language, index) => (
                 <StyledOption value={language} key={index}>
                   {language}

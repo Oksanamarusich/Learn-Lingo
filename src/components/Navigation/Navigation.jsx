@@ -21,14 +21,15 @@ export const Navigation = () => {
         <li>
           <StyledNavLink to="/">Home</StyledNavLink>
         </li>
-       
+
         <li>
           <StyledNavLink to="/teachers">Teachers</StyledNavLink>
         </li>
-        {token &&
+        {token && (
           <li>
             <StyledNavLink to="/favorites">Favorites</StyledNavLink>
-          </li>}
+          </li>
+        )}
       </NavigationList>
     </ContainerNavigation>
   );

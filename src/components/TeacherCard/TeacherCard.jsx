@@ -16,7 +16,7 @@ import { ModalBookTrial } from 'components/ModalBookTrial/ModalBookTrial';
 export const TeacherCard = ({ index, teacher, filters }) => {
   const [isReadMore, setIsReadMore] = useState(false);
   const [isModal, setIsModal] = useState(false);
-  
+
   const openModal = () => {
     setIsModal(true);
     document.body.style.overflow = 'hidden';
@@ -25,8 +25,7 @@ export const TeacherCard = ({ index, teacher, filters }) => {
   const closeModal = () => {
     setIsModal(false);
     document.body.style.overflow = '';
-  }
-
+  };
 
   return (
     <CardWrapper key={index}>
@@ -42,18 +41,20 @@ export const TeacherCard = ({ index, teacher, filters }) => {
 
         <LanguageLevel teacher={teacher} filters={filters} />
         {isReadMore && (
-          <ButtonBookTrial type="button" onClick ={openModal}>Book trial lesson</ButtonBookTrial>
+          <ButtonBookTrial type="button" onClick={openModal}>
+            Book trial lesson
+          </ButtonBookTrial>
         )}
       </WrapperLanguageLevel>
       <Modal
         isOpen={isModal}
-          className="modal-content"
-          overlayClassName="modal-overlay"
-          contentLabel="Modal"
-          onRequestClose={closeModal}>
+        className="modal-content"
+        overlayClassName="modal-overlay"
+        contentLabel="Modal"
+        onRequestClose={closeModal}
+      >
         <ModalBookTrial onClose={closeModal} teacher={teacher} />
-    </Modal>
+      </Modal>
     </CardWrapper>
-    
   );
 };

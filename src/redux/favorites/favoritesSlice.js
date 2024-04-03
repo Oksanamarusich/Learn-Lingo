@@ -7,7 +7,6 @@ const favoritesSlice = createSlice({
   },
   reducers: {
     addFavorites(state, action) {
-    
       const index = state.favorites.findIndex(
         favorite => favorite.avatar_url === action.payload.avatar_url
       );

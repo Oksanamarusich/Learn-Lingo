@@ -15,7 +15,6 @@ import { Filters } from 'components/Filters/Filters';
 
 export default function Teachers() {
   const dataTeachers = useSelector(selectVisibleTeachers);
-  console.log(dataTeachers);
   const filters = useSelector(selectFilters);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -71,8 +70,8 @@ export default function Teachers() {
           const snapshot = await get(child(dbRef, '/'));
 
           if (snapshot.exists()) {
-            const teachers = snapshot.val();
-            dispatch(getTeachers(teachers.teachers));
+            const data = snapshot.val();
+            dispatch(getTeachers(data.teachers));
           } else {
             toast.error('No data available');
           }
@@ -84,16 +83,18 @@ export default function Teachers() {
 
       getDatabaseTeachers();
     }
-  }, [filters,dispatch]);
+  }, [filters, dispatch]);
 
   return (
     <StyledMain>
       {!isLoading && <Filters />}
       <StyledSection>
         {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
-        {!isLoading && dataTeachers.length <= 29 && dataTeachers.length >= 4 && (
-          <ButtonLoadMore handleLoadMore={handleLoadMore} />
-        )}
+        {!isLoading &&
+          dataTeachers.length <= 29 &&
+          dataTeachers.length >= 4 && (
+            <ButtonLoadMore handleLoadMore={handleLoadMore} />
+          )}
       </StyledSection>
     </StyledMain>
   );

@@ -18,11 +18,11 @@ export const LanguageLevel = ({ teacher }) => {
       {levels.map((level, index) => (
         <li key={index}>
           {active ? (
-            <ButtonLevelActive  onClick={handleClick}>
+            <ButtonLevelActive onClick={handleClick}>
               #{level}
             </ButtonLevelActive>
           ) : (
-              <ButtonLevel  onClick={handleClick}>#{level}</ButtonLevel>
+            <ButtonLevel onClick={handleClick}>#{level}</ButtonLevel>
           )}
         </li>
       ))}

@@ -16,7 +16,7 @@ import { favoritesReducer } from './favorites/favoritesSlice';
 import { filtersReducer } from './filters/filtersSlice';
 import { teachersReducer } from './teachers/teachersSlice';
 
- const persistAuthConfig = {
+const persistAuthConfig = {
   key: 'auth',
   storage,
   whitelist: ['token'],
@@ -32,7 +32,7 @@ export const store = configureStore({
     auth: persistReducer(persistAuthConfig, authReducer),
     teachers: teachersReducer,
     favorites: persistReducer(persistFavoritesConfig, favoritesReducer),
-    filters:  filtersReducer,
+    filters: filtersReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -6,8 +6,7 @@ export const ContainerBookTrial = styled.div`
   padding: 64px;
   border-radius: 30px;
   width: 599px;
-  /* height: 971px; */
-  height: 800px;
+  height: 700px;
   overflow: auto scroll;
   background-color: ${({ theme }) => theme.colors.primaryBgColor};
 `;

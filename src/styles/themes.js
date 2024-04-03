@@ -12,8 +12,7 @@ export const theme = {
     borderInput: 'rgba(18, 20, 23, 0.1)',
     subtitle: '#8a8a89',
     numeric: '#38cd3e',
-    before:'rgba(18, 20, 23, 0.2)',
-    
+    before: 'rgba(18, 20, 23, 0.2)',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -33,8 +32,7 @@ export const themePeach = {
     borderInput: 'rgba(18, 20, 23, 0.1)',
     subtitle: '#8a8a89',
     numeric: '#38cd3e',
-    before:'rgba(18, 20, 23, 0.2)',
-    
+    before: 'rgba(18, 20, 23, 0.2)',
   },
 
   animation: {
@@ -55,8 +53,7 @@ export const themeGray = {
     borderInput: 'rgba(18, 20, 23, 0.1',
     subtitle: '#8a8a89',
     numeric: '#38cd3e',
-    before:'rgba(18, 20, 23, 0.2)',
-    
+    before: 'rgba(18, 20, 23, 0.2)',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -76,8 +73,7 @@ export const themeBlue = {
     borderInput: 'rgba(18, 20, 23, 0.1)',
     subtitle: '#8a8a89',
     numeric: '#38cd3e',
-    before:'rgba(18, 20, 23, 0.2)',
-    
+    before: 'rgba(18, 20, 23, 0.2)',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -97,8 +93,7 @@ export const themeCrimson = {
     borderInput: 'rgba(18, 20, 23, 0.1)',
     subtitle: '#8a8a89',
     numeric: '#38cd3e',
-    before:'rgba(18, 20, 23, 0.2)',
-    
+    before: 'rgba(18, 20, 23, 0.2)',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
@@ -118,8 +113,7 @@ export const themePink = {
     borderInput: 'rgba(18, 20, 23, 0.1)',
     subtitle: '#8a8a89',
     numeric: '#38cd3e',
-    before:'rgba(18, 20, 23, 0.2)',
-    
+    before: 'rgba(18, 20, 23, 0.2)',
   },
   animation: {
     transition: '300ms cubic-bezier(0.4, 0, 0.2, 1)',

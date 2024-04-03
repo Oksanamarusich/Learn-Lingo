@@ -5,7 +5,12 @@ export const ListTeachers = ({ data, filters }) => {
   return (
     <WrapperListTeachers>
       {data.map((item, index) => (
-        <TeacherCard key={index} index={index} teacher={item} filters={filters} />
+        <TeacherCard
+          key={index}
+          index={index}
+          teacher={item}
+          filters={filters}
+        />
       ))}
     </WrapperListTeachers>
   );

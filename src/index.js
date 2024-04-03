@@ -16,17 +16,17 @@ Modal.setAppElement('#root');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/Learn-Lingo">
-          <ThemeProvider theme={themePeach}>
-            <App />
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter basename="/Learn-Lingo">
+        <ThemeProvider theme={themePeach}>
+          <App />
           <GlobalStyle />
           <Toaster position="top-center" reverseOrder={false} />
-          </ThemeProvider>
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
-    
+        </ThemeProvider>
+      </BrowserRouter>
+    </PersistGate>
+  </Provider>
+
   //  </React.StrictMode>
 );

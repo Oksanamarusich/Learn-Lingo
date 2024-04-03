@@ -31,5 +31,5 @@ export const ButtonRegistration = styled.button`
   font-size: 16px;
   line-height: 1.25;
   color: ${({ theme }) => theme.colors.primaryBgColor};
-  white-space:nowrap;
+  white-space: nowrap;
 `;
