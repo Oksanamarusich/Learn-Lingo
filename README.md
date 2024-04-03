@@ -26,13 +26,16 @@
 <ul>
   <li>
     <p>Registration, login, to get the current user, logout users.</p>
-    ![Image product](./src/assets/img/registration.png)
+
+![Image product](./src/assets/img/registration.png)
+
   </li>
   <li>
   <p>A "Home" page with a list of company benefits and a link to get started with the application and redirect to the "Teachers" page. Stylization is implemented with different palette variations.</p>
   </li>
   <li>
   <p>Rendering of the list of cards. Four cards are rendered on the  "Teachers" page, and the rest are loaded by clicking on the button "Load more".</p>
+  
   ![Image product](./src/assets/img/listCards.png)
   </li>
   <li>
@@ -43,6 +46,7 @@
     ![Image product](./src/assets/img/card.png)
   </li>
   <li><p>Filtering by the language of instruction, by the level of students`knowledge and by the price per lesson hour.</p>
+  
   ![Image product](./src/assets/img/filtering.png)
   </li>
 </ul>
