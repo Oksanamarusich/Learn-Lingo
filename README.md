@@ -43,7 +43,9 @@
   </li>
   <li>
     <p>A card with description of the teacher`s characteristics. When you click on the button "Read more", the card opens with more detailed information about the teacher and feedback from his students. If you click on the button "Book trial lesson", a modal window opens with a form for booking a trial class. The modal window is closed by clicking on the button in the form of a "cross", by clicking on the backdrop or pressing the Esc key. </p>
-    ![Image product](./src/assets/img/card.png)
+
+![Image product](./src/assets/img/card.png)
+
   </li>
   <li><p>Filtering by the language of instruction, by the level of students`knowledge and by the price per lesson hour.</p>
   
