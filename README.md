@@ -31,7 +31,7 @@
   <li>
   <p>A "Home" page with a list of company benefits and a link to get started with the application and redirect to the "Teachers" page. Stylization is implemented with different palette variations.</p>
 
-![Image product](./src/assets/img/registration.png)
+![Image product](./src/assets/img/homePage.png)
 
   </li>
   <li>
