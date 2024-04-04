@@ -45,8 +45,7 @@ export const ModalBookTrial = ({ onClose, teacher }) => {
   };
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
-    console.log(actions);
+
     toast.success(
       'The order has been sent, wait for a call from the administrator'
     );
