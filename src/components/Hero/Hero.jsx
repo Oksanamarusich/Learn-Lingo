@@ -3,6 +3,7 @@ import {
   ContainerDescription,
   ContainerTitle,
   DescriptionHero,
+  HeroPicture,
   SectionHero,
   Title,
   TitleContainer,
@@ -32,7 +33,7 @@ export const Hero = ({ theme, picture }) => {
           <ButtonHero type="button">Get started</ButtonHero>
         </Link>
       </ContainerTitle>
-      <img
+      <HeroPicture 
         src={picture || defaultPicture}
         alt="girl with laptop"
         width="568px"

@@ -42,6 +42,7 @@ export const UserMenu = () => {
     <UserMenuContainer>
       <ContainerButton>
         <LogInIcon />
+
         <ButtonLogIn onClick={openModalLogin}>LogIn</ButtonLogIn>
         <Modal
           isOpen={isModalOpenLogin}
@@ -62,6 +63,7 @@ export const UserMenu = () => {
     <UserMenuContainer>
       <ContainerButton>
         <LogInIcon />
+
         <ButtonLogIn onClick={openModalLogin}>LogIn</ButtonLogIn>
 
         <Modal

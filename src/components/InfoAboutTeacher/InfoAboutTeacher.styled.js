@@ -2,7 +2,13 @@ import { styled } from 'styled-components';
 
 export const WrapperInfoAboutTeacher = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 48px;
+  height:500px;
+  @media only screen and (min-width: 1440px) {
+    flex-direction: row;
+    height:auto;
+  }
 `;
 
 export const BoxPhoto = styled.div`
@@ -28,7 +34,12 @@ export const StyledStatus = styled.i`
 
 export const BlokNameRating = styled.div`
   display: flex;
-  gap: 149px;
+  flex-direction:column;
+
+     @media only screen and (min-width: 1440px) {
+    flex-direction:row;
+     gap: 149px;
+   }
 `;
 
 export const Subtitle = styled.h4`
@@ -52,9 +63,9 @@ export const TitleName = styled.h2`
 export const BlockRating = styled.div`
   position: relative;
   display: flex;
-  gap: 32px;
   width: 607px;
   height: 24px;
+  gap: 32px;
 `;
 
 export const BlokIcon = styled.div`
@@ -70,7 +81,10 @@ export const Text = styled.p`
   font-size: 16px;
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.primaryTxtColor};
-  white-space: nowrap;
+     @media only screen and (min-width: 1440px) {
+    white-space: nowrap;
+   }
+  
 `;
 
 export const TextBefore = styled.p`
@@ -98,6 +112,7 @@ export const Info = styled.div`
   display: flex;
   margin-bottom: 8px;
 `;
+
 export const TextUnderline = styled.p`
   font-family: var(--family);
   font-weight: 500;

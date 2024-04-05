@@ -2,11 +2,13 @@ import { styled } from 'styled-components';
 
 export const UserMenuContainer = styled.ul`
   display: flex;
+  align-items: center;
   gap: 16px;
 `;
 export const ButtonLogIn = styled.button`
+  padding: 14px 0;
+  height: 48px;
   width: 73px;
-  height: 20px;
   background-color: transparent;
   font-family: var(--family);
   font-weight: 700;
@@ -14,9 +16,9 @@ export const ButtonLogIn = styled.button`
   line-height: 1.25;
   color: ${({ theme }) => theme.colors.buttonRegistration};
 `;
+
 export const ContainerButton = styled.li`
   display: flex;
-  justify-content: center;
   align-items: center;
 `;
 

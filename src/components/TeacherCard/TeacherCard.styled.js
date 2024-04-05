@@ -4,6 +4,10 @@ export const CardWrapper = styled.li`
   border-radius: 24px;
   padding: 24px;
   background: ${({ theme }) => theme.colors.primaryBgColor};
+  width: 300px;
+     @media only screen and (min-width: 1440px) {
+    width:auto;
+   }
 `;
 
 export const ButtonMoreInfo = styled.button`
@@ -18,7 +22,12 @@ export const ButtonMoreInfo = styled.button`
 `;
 
 export const WrapperLanguageLevel = styled.div`
+display:flex;
+flex-direction:column;
   margin-left: 168px;
+     @media only screen and (min-width: 1440px) {
+    display:block;
+   }
 `;
 export const ButtonBookTrial = styled.button`
 margin-top:32px;

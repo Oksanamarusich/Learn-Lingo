@@ -1,4 +1,5 @@
 import { ListTeachers } from 'components/ListTeachers/ListTeachers';
+import { StyledMain } from 'pages/Teachers/Teachers.styled';
 import { useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/favorites/selectors';
 import {
@@ -12,7 +13,7 @@ export default function Favorites() {
   const dataFavorites = useSelector(selectFavorites);
 
   return (
-    <main>
+    <StyledMain>
       <StyledSection>
         {!dataFavorites.length ? (
           <FavoriteTitle>
@@ -25,6 +26,6 @@ export default function Favorites() {
           <ListTeachers data={dataFavorites} />
         )}
       </StyledSection>
-    </main>
+    </StyledMain>
   );
 }

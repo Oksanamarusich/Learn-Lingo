@@ -15,6 +15,7 @@ import {
   themePeach,
   themePink,
 } from 'styles/themes';
+import { HomeMain } from './Home.styled';
 
 const pictures = [peach, pink, blue, gray, crimson];
 
@@ -51,10 +52,10 @@ export default function Home() {
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      <main>
+      <HomeMain>
         <Hero picture={picture} />
         <Advantages />
-      </main>
+      </HomeMain>
     </ThemeProvider>
   );
 }

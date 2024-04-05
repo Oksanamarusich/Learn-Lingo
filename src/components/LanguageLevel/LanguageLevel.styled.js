@@ -2,7 +2,11 @@ import { styled } from 'styled-components';
 
 export const BlockLanguage = styled.ul`
   display: flex;
+  flex-direction:column;
   gap: 8px;
+     @media only screen and (min-width: 1440px) {
+    flex-direction:row;
+   }
 `;
 
 export const ButtonLevelActive = styled.button`
