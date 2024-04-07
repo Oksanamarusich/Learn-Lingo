@@ -5,11 +5,12 @@ import RobotoMedium from '../fonts/Roboto-Medium.ttf';
 import RobotoRegular from '../fonts/Roboto-Regular.ttf';
 import RobotoItalic from '../fonts/Roboto-Italic.ttf';
 
+
 export const GlobalStyle = createGlobalStyle`
 
 
 :root{
-  --family:"Roboto", sans-serif;
+--family:"Roboto", sans-serif;
 --primaryTxtColor:${({ theme }) => theme.colors.primaryTxtColor};
  --accent: ${({ theme }) => theme.colors.accent};
  --buttonBgColor:${({ theme }) => theme.colors.buttonBgColor};
@@ -44,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
   src: local('Roboto-Italic'), url(${RobotoItalic}) format('ttf');
   font-style: italic;
 }
+
 
 body {
   

@@ -4,7 +4,7 @@ export const WrapperInfoAboutTeacher = styled.div`
   display: flex;
   flex-direction: column;
   gap: 48px;
-  height:500px;
+
   @media only screen and (min-width: 1440px) {
     flex-direction: row;
     height:auto;
@@ -17,7 +17,7 @@ export const BoxPhoto = styled.div`
   justify-content: center;
   align-items: center;
   border: 3px solid ${({ theme }) => theme.colors.accent};
-  border-radius: 100px;
+  border-radius: 50%;
   width: 120px;
   height: 120px;
 `;
@@ -49,6 +49,7 @@ export const Subtitle = styled.h4`
   font-size: 16px;
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.subtitle};
+  white-space:nowrap;
 `;
 
 export const TitleName = styled.h2`
@@ -63,16 +64,25 @@ export const TitleName = styled.h2`
 export const BlockRating = styled.div`
   position: relative;
   display: flex;
-  width: 607px;
+  flex-direction:column;
+  
+ @media only screen and (min-width: 1440px) {
+    flex-direction:row;
+     width: 607px;
   height: 24px;
   gap: 32px;
+   }
+
 `;
 
 export const BlokIcon = styled.div`
   display: flex;
   gap: 8px;
-  justify-content: center;
+  
   align-items: center;
+   @media only screen and (min-width: 1440px) {
+    justify-content: center;
+   }
 `;
 
 export const Text = styled.p`
@@ -110,7 +120,12 @@ export const TextBefore = styled.p`
 
 export const Info = styled.div`
   display: flex;
+  flex-direction:column;
   margin-bottom: 8px;
+   @media only screen and (min-width: 1440px) {
+    flex-direction:row;
+     
+   }
 `;
 
 export const TextUnderline = styled.p`

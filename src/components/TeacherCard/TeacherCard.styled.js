@@ -19,14 +19,16 @@ export const ButtonMoreInfo = styled.button`
   line-height: 1.5;
   text-decoration: underline;
   color: ${({ theme }) => theme.colors.primaryTxtColor};
+  white-space:nowrap;
 `;
 
 export const WrapperLanguageLevel = styled.div`
 display:flex;
 flex-direction:column;
-  margin-left: 168px;
+  
      @media only screen and (min-width: 1440px) {
     display:block;
+    margin-left: 168px;
    }
 `;
 export const ButtonBookTrial = styled.button`

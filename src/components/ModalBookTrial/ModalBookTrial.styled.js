@@ -3,12 +3,17 @@ import { styled } from 'styled-components';
 
 export const ContainerBookTrial = styled.div`
   position: relative;
-  padding: 64px;
+  padding: 60px 20px;
   border-radius: 30px;
-  width: 599px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
   overflow: auto scroll;
   background-color: ${({ theme }) => theme.colors.primaryBgColor};
+  @media only screen and (min-width: 1440px) {
+    padding: 64px;
+    width: 599px;
+    height: 700px;
+  }
 `;
 
 export const DescriptionBookTrial = styled.p`
@@ -82,7 +87,6 @@ export const FieldRadioGroup = styled(Field)`
   height: 24px;
   border: 2px solid ${({ theme }) => theme.colors.before};
   border-radius: 50%;
-
   cursor: pointer;
 
   &:checked {
@@ -96,9 +100,16 @@ export const FieldRadioGroup = styled(Field)`
       background-color: ${({ theme }) => theme.colors.buttonBgColor};
       border-radius: 50%;
       position: absolute;
-      top: 47%;
-      left: 2.6%;
+      top: 49%;
+      left: 6.5%;
       transform: translate(-50%, -50%);
+      @media only screen and (min-width: 768px) {
+        left: 3.5%;
+      }
+      @media only screen and (min-width: 1440px) {
+        top: 47%;
+        left: 2.6%;
+      }
     }
   }
 `;
