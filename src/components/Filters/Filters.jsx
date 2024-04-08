@@ -100,6 +100,7 @@ export const Filters = () => {
           <ButtonSearch type="submit">Search</ButtonSearch>
         </StyledForm>
       </Formik>
+     
     </FiltersSection>
   );
 };

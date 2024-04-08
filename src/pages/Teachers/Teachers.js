@@ -2,7 +2,7 @@ import { getDatabase, ref, child, get, limitToFirst } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import { ButtonLoadMore } from 'components/ButtonLoadMore/ButtonLoadMore';
 import { ListTeachers } from 'components/ListTeachers/ListTeachers';
-import { StyledMain, StyledSection } from './Teachers.styled';
+import { StyledMain, StyledSection, Text } from './Teachers.styled';
 import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTeachers } from '../../redux/teachers/teachersSlice';
@@ -89,6 +89,7 @@ export default function Teachers() {
     <StyledMain>
       {!isLoading && <Filters />}
       <StyledSection>
+        {!dataTeachers.length && <Text>No teachers were found for your request</Text>} 
         {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
         {!isLoading &&
           dataTeachers.length <= 29 &&

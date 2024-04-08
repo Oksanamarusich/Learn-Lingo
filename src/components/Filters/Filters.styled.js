@@ -5,7 +5,7 @@ export const FiltersSection = styled.section`
   padding: 10px 20px;
   width: 100%;
   @media only screen and (min-width: 1440px) {
-    padding: 64px 128px 32px;
+  padding: 64px 128px 32px 128px;
   }
 `;
 

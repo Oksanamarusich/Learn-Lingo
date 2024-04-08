@@ -40,21 +40,6 @@ export const UserMenu = () => {
 
   return isAuth ? (
     <UserMenuContainer>
-      <ContainerButton>
-        <LogInIcon />
-
-        <ButtonLogIn onClick={openModalLogin}>LogIn</ButtonLogIn>
-        <Modal
-          isOpen={isModalOpenLogin}
-          className="modal-content"
-          overlayClassName="modal-overlay"
-          contentLabel="Modal"
-          onRequestClose={closeModalLogin}
-        >
-          <LoginForm onClose={closeModalLogin} />
-        </Modal>
-      </ContainerButton>
-
       <li>
         <LogOut />
       </li>
