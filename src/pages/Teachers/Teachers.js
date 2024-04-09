@@ -2,10 +2,11 @@ import { getDatabase, ref, child, get, limitToFirst } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import { ButtonLoadMore } from 'components/ButtonLoadMore/ButtonLoadMore';
 import { ListTeachers } from 'components/ListTeachers/ListTeachers';
-import { StyledMain, StyledSection, Text } from './Teachers.styled';
+import { ButtonTop, StyledMain, StyledSection, Text } from './Teachers.styled';
 import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTeachers } from '../../redux/teachers/teachersSlice';
+import { IoIosArrowUp } from 'react-icons/io';
 import {
   selectFilters,
   selectVisibleTeachers,
@@ -24,6 +25,13 @@ export default function Teachers() {
 
   const handleLoadMore = () => {
     setCurrentPage(prevState => prevState + 1);
+  };
+
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
@@ -89,7 +97,9 @@ export default function Teachers() {
     <StyledMain>
       {!isLoading && <Filters />}
       <StyledSection>
-        {!dataTeachers.length && <Text>No teachers were found for your request</Text>} 
+        {!isLoading && !dataTeachers.length && (
+          <Text>No teachers were found for your request</Text>
+        )}
         {isLoading ? <Loader /> : <ListTeachers data={dataTeachers} />}
         {!isLoading &&
           dataTeachers.length <= 29 &&
@@ -97,6 +107,11 @@ export default function Teachers() {
             <ButtonLoadMore handleLoadMore={handleLoadMore} />
           )}
       </StyledSection>
+      {!isLoading && (
+        <ButtonTop onClick={handleTop}>
+          <IoIosArrowUp size="30px" />
+        </ButtonTop>
+      )}
     </StyledMain>
   );
 }

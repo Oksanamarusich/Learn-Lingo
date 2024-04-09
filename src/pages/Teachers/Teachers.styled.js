@@ -24,3 +24,20 @@ export const Text = styled.p`
   line-height: 1;
   color: ${({ theme }) => theme.colors.primaryTxtColor};
 `;
+
+export const ButtonTop = styled.button`
+position:absolute;
+right:3%;
+margin-top:-20rem;
+padding:10px;
+width:60px;
+height:60px;
+border-radius: 100%;
+background-color: ${({ theme }) => theme.colors.buttonBgColor};
+transition: background-color $({(theme)}=>theme.animation.transition);
+
+&:hover{
+  background-color: ${({ theme }) => theme.colors.hover};
+}
+`;
+
